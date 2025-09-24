@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Время в областных центрах России</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Текущее время в областных центрах России</h1>
+        <button id="refreshBtn" type="button">Обновить</button>
+        <span id="updatedAt" class="muted"></span>
+    </header>
+
+    <main>
+        <div id="error" class="error" hidden></div>
+        <table id="timeTable">
+            <thead>
+                <tr>
+                    <th>Субъект РФ</th>
+                    <th>Областной центр</th>
+                    <th>Часовой пояс</th>
+                    <th>Текущее время</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

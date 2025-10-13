@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS `browser_game` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `browser_game`;
+
+CREATE TABLE IF NOT EXISTS `scores` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(32) NOT NULL,
+  `score` INT NOT NULL DEFAULT 0,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idx_score` (`score`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+

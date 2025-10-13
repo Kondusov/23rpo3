@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бегущий Кот — Dino Runner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Бегущий Кот</h1>
+            <div class="controls">
+                <input id="playerName" class="input" type="text" maxlength="16" placeholder="Ваше имя" />
+                <button id="startBtn" class="btn">Старт</button>
+                <button id="restartBtn" class="btn btn-secondary" disabled>Рестарт</button>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="game-wrap">
+                <canvas id="game" width="960" height="320"></canvas>
+                <div class="hud">
+                    <span id="score">Счёт: 0</span>
+                    <span id="best">Рекорд: 0</span>
+                    <span id="speed">Скорость: 1.0x</span>
+                </div>
+                <div id="overlay" class="overlay hidden">
+                    <div class="overlay-card">
+                        <h2 id="overlayTitle">Готовы?</h2>
+                        <p id="overlayText">Нажмите Старт или клавишу Пробел</p>
+                        <div class="overlay-actions">
+                            <button id="overlayStart" class="btn">Играть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <h2>Таблица лидеров</h2>
+                <div class="leaderboard">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Игрок</th>
+                                <th>Счёт</th>
+                                <th>Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody"></tbody>
+                    </table>
+                </div>
+                <button id="saveBtn" class="btn btn-accent" disabled>Сохранить счёт</button>
+                <div id="saveMsg" class="save-msg"></div>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <span>Управление: Пробел/↑ — прыжок, ↓ — пригнуться, R — рестарт</span>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
+

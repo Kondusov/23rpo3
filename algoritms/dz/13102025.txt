@@ -1,0 +1,2 @@
+Посмотреть пример жадного алгоритма https://github.com/Kondusov/23rpo3/blob/main/algoritms/jadnAlgoritms/changeCoin.js
+Написать подобный самостоятельно (ЯП любой)

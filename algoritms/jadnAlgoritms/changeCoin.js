@@ -2,6 +2,7 @@ function makeChange(coins, amount) {
   // Сортируем монеты по убыванию номинала,
   // чтобы на каждом шаге брать наибольшую
   coins.sort((a, b) => b - a);
+  console.log(coins.sort((a, b) => b - a));
 
   let change = [];
   let remainingAmount = amount;

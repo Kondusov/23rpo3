@@ -19,3 +19,6 @@ function binarySearch(sortedArray, key){
 	// key wasn't found
     return -1;
 }
+
+let arr1 = [2,4,5,7,8,12,25,38];
+console.log(binarySearch(arr1, 4));

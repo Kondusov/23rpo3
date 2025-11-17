@@ -15,7 +15,21 @@ sortByLength(arr1);
 console.log(arr1); 
 
 
-
+//методом пузырька
+function Sort(arr){
+    var tmp;
+    for(let j = arr.length -1; j > 0; j--){
+        for(let i = 0; i < j; i++){
+            if(arr[i+1].length<arr[i].length){
+                tmp = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = tmp
+            }
+        }
+    }return arr
+}
+var arr = ["banana", "kiwi", "apple"]
+console.log(Sort(arr))
 //еще одна вариация сортировки (используя количество символов для индекса
 // при добавлении в новый массив)
 function sortAlf(arr){
